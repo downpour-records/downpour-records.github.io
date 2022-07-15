@@ -14,11 +14,11 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    script: [
+    /*script: [
       {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
       }
-    ],
+    ],*/
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -37,6 +37,10 @@ export default {
     ],
   },
 
+  image: {
+    domains: ['http://localhost:3000']
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/styles/main.scss',
@@ -53,6 +57,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+
+    '@nuxt/image',
+
     // https://go.nuxtjs.dev/tailwindcss
     // '@nuxtjs/tailwindcss',
   ],
@@ -61,7 +68,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

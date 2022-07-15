@@ -1,14 +1,24 @@
 <template>
   <header>
     <div class="container">
-      <h1 class="font-medium text-2xl text-secondary">Header</h1>
+      <div class="flex items-center">
+        <Logo image-path="/images/header/Logo.svg" />
+      </div>
     </div>
   </header>
 </template>
 
 <style lang="scss">
 header {
-  @apply py-20px;
+  background: rgb(0 30 38 / 80%);
+  border-bottom: 1px solid #203247;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  backdrop-filter: blur(12px);
 }
 </style>
 
