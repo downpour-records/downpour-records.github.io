@@ -1,0 +1,11 @@
+header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 16px 0;
+  width: 100%;
+  background: rgba(0, 30, 38, .8);
+  border-bottom: 1px solid #203247;
+  backdrop-filter: blur(12px);
+}

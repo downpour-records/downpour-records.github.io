@@ -10,7 +10,7 @@
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint": "npm run lint:style",
     "lintfix": "npm run lint:style -- --fix",
-    "lint:scss": "stylelint \"assets/styles/**/*.scss\" \"assets/styles/*.scss\" --fix --config ./.stylelintrc-format",
+    "lint:scss": "stylelint \"assets/styles/**/*.scss\" \"assets/styles/*.scss\" \"components/**/*.scss\" --fix --config ./.stylelintrc-format",
     "deploy": "push-dir --dir=dist --branch=main --cleanup"
   },
   "dependencies": {
