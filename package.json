@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint": "npm run lint:style",
     "lintfix": "npm run lint:style -- --fix",
+    "lint:scss": "stylelint \"assets/styles/**/*.scss\" \"assets/styles/*.scss\" --fix --config ./.stylelintrc-format",
     "deploy": "push-dir --dir=dist --branch=main --cleanup"
   },
   "dependencies": {
@@ -27,9 +28,19 @@
     "@nuxtjs/tailwindcss": "^4.2.1",
     "postcss": "^8.4.4",
     "postcss-html": "^1.3.0",
+    "postcss-scss": "^4.0.4",
     "push-dir": "^0.4.1",
-    "stylelint": "^14.1.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^10.3.1",
+    "stylelint": "^14.9.1",
+    "stylelint-at-rule-no-children": "^0.3.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^8.0.0",
     "stylelint-config-recommended-vue": "^1.1.0",
-    "stylelint-config-standard": "^24.0.0"
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-processor-html": "^1.0.0",
+    "stylelint-value-no-unknown-custom-properties": "^4.0.0"
   }
 }
