@@ -9,8 +9,10 @@ export default {
 <template>
   <header>
     <div class="container">
-      <div class="flex items-center">
+      <div class="flex items-center justify-between">
         <Logo image-path="/images/header/Logo.svg" />
+
+        <LangSwitcher/>
       </div>
     </div>
   </header>
