@@ -12,7 +12,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'msapplication-TileImage', content: '/favicon-270x270-min.png' }
     ],
     /*script: [
       {
@@ -20,7 +21,11 @@ export default {
       }
     ],*/
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', sizes: "16x16", href: '/favicon-16x16-min.png' },
+      { rel: 'icon', sizes: "32x32", href: '/favicon-32x32-min.png' },
+      { rel: 'icon', sizes: "192x192", href: '/favicon-192x192-min.png' },
+      { rel: 'icon', sizes: "512x512", href: '/favicon-512x512-min.png' },
+      { rel: 'apple-touch-icon', href: '/favicon-180x180-min.png' },
       {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com'

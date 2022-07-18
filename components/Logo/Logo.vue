@@ -2,7 +2,23 @@
 export default {
   name: 'Logo',
   props: {
-    imagePath: String
+    imagePath: {
+      type: String,
+      required: true,
+      default: '/images/header/Logo.svg'
+    },
+    width: {
+      type: String,
+      required: false
+    },
+    height: {
+      type: String,
+      required: false
+    },
+    alt: {
+      type: String,
+      required: false
+    },
   }
 }
 </script>
@@ -11,7 +27,8 @@ export default {
   <a href="/" class="logo">
     <nuxt-img
       :src="imagePath"
-      width="166" height="48"
-      alt="Downpour records logo"/>
+      :width="width"
+      :height="height"
+      :alt="alt"/>
   </a>
 </template>

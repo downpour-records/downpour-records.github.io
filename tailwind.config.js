@@ -39,12 +39,14 @@ module.exports = {
         '90px': '90px',
         '95px': '95px',
         '100px': '100px',
+        '105px': '105px',
       },
       colors: {
         primary: '#00C675',
         secondary: '#001E26',
         skyblue: '#E5F9FF',
-        lightgreen: '#00DC82'
+        lightgreen: '#00DC82',
+        darkgreen: '#012A35'
       }
     },
     container: {
