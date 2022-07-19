@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "@fancyapps/ui": "^4.0.27",
     "@nuxt/image": "^0.7.1",
     "@nuxt/types": "^2.15.8",
     "@nuxtjs/stylelint-module": "^4.1.0",

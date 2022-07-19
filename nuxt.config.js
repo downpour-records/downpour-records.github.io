@@ -2,9 +2,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  router: {
+  /*router: {
     base: './'
-  },
+  },*/
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -17,7 +17,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Downpour Records label. We provide a range of services for the creation of original musical projects: studio mixing, mastering and distribution.' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'msapplication-TileImage', content: '/favicon-270x270-min.png' }
+      { name: 'msapplication-TileImage', content: './favicon-270x270-min.png' }
     ],
     /*script: [
       {
@@ -25,11 +25,11 @@ export default {
       }
     ],*/
     link: [
-      { rel: 'icon', sizes: "16x16", href: '/favicon-16x16-min.png' },
-      { rel: 'icon', sizes: "32x32", href: '/favicon-32x32-min.png' },
-      { rel: 'icon', sizes: "192x192", href: '/favicon-192x192-min.png' },
-      { rel: 'icon', sizes: "512x512", href: '/favicon-512x512-min.png' },
-      { rel: 'apple-touch-icon', href: '/favicon-180x180-min.png' },
+      { rel: 'icon', sizes: "16x16", href: './favicon-16x16-min.png' },
+      { rel: 'icon', sizes: "32x32", href: './favicon-32x32-min.png' },
+      { rel: 'icon', sizes: "192x192", href: './favicon-192x192-min.png' },
+      { rel: 'icon', sizes: "512x512", href: './favicon-512x512-min.png' },
+      { rel: 'apple-touch-icon', href: './favicon-180x180-min.png' },
       {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com'
@@ -99,7 +99,7 @@ export default {
       quality: 85
     },
     pngquant: {
-      quality: [0.65, 0.8]
+      quality: [0.7, 0.8]
     },
     webp: {
       quality: 75
@@ -119,6 +119,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    publicPath: './_nuxt/',
     extend (config, { isDev, isClient, loaders: { vue } }) {
       vue.transformAssetUrls.img = ['data-src', 'src']
       vue.transformAssetUrls.source = ['data-srcset', 'srcset']

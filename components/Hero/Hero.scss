@@ -1,12 +1,12 @@
 .hero {
   width: 100%;
-  height: calc(100vh - calc(100vh - 100%));
+  height: 100vh;
 
   @apply relative;
 
-  @media only screen and (min-width: theme('screens.xl')) {
-    min-height: 700px;
-  }
+  /*@media only screen and (min-width: theme('screens.xl')) {
+    min-height: 500px;
+  }*/
 
   &__bg {
     width: 100%;

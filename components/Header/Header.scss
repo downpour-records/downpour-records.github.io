@@ -2,17 +2,17 @@ header {
 
   @apply fixed;
 
-  @apply z-10;
+  @apply z-20;
 
   @apply top-0;
 
   @apply left-0;
 
-  @apply py-4;
+  @apply py-3;
 
   @apply w-full;
 
   background: rgba(0, 30, 38, .8);
-  border-bottom: 1px solid #203247;
+  //border-bottom: 1px solid #203247;
   backdrop-filter: blur(12px);
 }

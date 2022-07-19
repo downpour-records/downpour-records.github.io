@@ -15,7 +15,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
+      'sans': ['\'Roboto\'', 'sans-serif'],
     },
     extend: {
       spacing: {
@@ -46,7 +46,8 @@ module.exports = {
         secondary: '#001E26',
         skyblue: '#E5F9FF',
         lightgreen: '#00DC82',
-        darkgreen: '#012A35'
+        darkgreen: '#012A35',
+        lightgrey: '#B2CCCC'
       }
     },
     container: {
