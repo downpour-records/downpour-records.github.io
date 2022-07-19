@@ -73,6 +73,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
   ],
 

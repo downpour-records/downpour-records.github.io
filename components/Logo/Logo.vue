@@ -1,3 +1,13 @@
+<template>
+  <a href="/" class="logo">
+    <img
+      :src="imagePath"
+      :width="width"
+      :height="height"
+      :alt="alt">
+  </a>
+</template>
+
 <script>
 export default {
   name: 'Logo',
@@ -22,13 +32,3 @@ export default {
   }
 }
 </script>
-
-<template>
-  <a href="/" class="logo">
-    <nuxt-img
-      :src="imagePath"
-      :width="width"
-      :height="height"
-      :alt="alt"/>
-  </a>
-</template>

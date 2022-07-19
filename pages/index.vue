@@ -1,9 +1,10 @@
 <template>
   <div class="wrapper">
+    <Header/>
     <main>
-      <Header/>
+      <Hero/>
     </main>
-    <Footer/>
+<!--    <Footer/>-->
   </div>
 </template>
 
