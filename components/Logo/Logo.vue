@@ -1,7 +1,7 @@
 <template>
   <a href="/" class="logo">
     <img
-      :src="imagePath"
+      :src="imageUrl"
       :width="width"
       :height="height"
       :alt="alt">
@@ -12,10 +12,10 @@
 export default {
   name: 'Logo',
   props: {
-    imagePath: {
+    imageUrl: {
       type: String,
-      required: true,
-      default: '/images/header/Logo.svg'
+      required: false,
+      default: require('~/assets/images/header/Logo.svg')
     },
     width: {
       type: String,

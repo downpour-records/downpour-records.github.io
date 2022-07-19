@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  /*router: {
+    base: './'
+  },*/
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Downpour Records - Official label website',
@@ -53,6 +57,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/vue-lazysizes.client.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -63,10 +68,16 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
 
-    // '@nuxt/image',
+    // Nuxt Image module https://image.nuxtjs.org/components/nuxt-img
+    /*['@nuxt/image', {
+      provider: 'static',
+      dir: "assets/images",
+    }],*/
 
     // https://go.nuxtjs.dev/tailwindcss
     // '@nuxtjs/tailwindcss',
+
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -75,8 +86,25 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
   ],
+
+  optimizedImages: {
+    inlineImageLimit: -1,
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: 'img-loader',
+    mozjpeg: {
+      quality: 85
+    },
+    pngquant: {
+      quality: [0.65, 0.8]
+    },
+    webp: {
+      quality: 75
+    }
+  },
 
   robots: {
     UserAgent: '*',
@@ -91,9 +119,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, { isDev, isClient, loaders: { vue } }) {
+      vue.transformAssetUrls.img = ['data-src', 'src']
+      vue.transformAssetUrls.source = ['data-srcset', 'srcset']
+    }
   },
 
   watch: [
     '~/tailwind.config.js',
+    '~/assets/images/*',
+    '~/assets/images/**/*'
   ]
 }

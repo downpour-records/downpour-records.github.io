@@ -1,6 +1,13 @@
 <template>
   <section class="hero">
-    <img src="/images/hero/hero_bg.jpg" alt="Hero image" class="hero__bg">
+<!--    <img data-src="~/assets/images/hero/hero_bg?webp" alt="Hero image" class="hero__bg lazyload">-->
+
+    <picture>
+      <source data-srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
+      <source data-srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
+      <img data-src="~/assets/images/hero/hero_bg.jpg" class="hero__bg lazyload" alt="Hero image">
+    </picture>
+
     <div class="container"></div>
   </section>
 </template>
