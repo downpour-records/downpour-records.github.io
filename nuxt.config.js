@@ -4,14 +4,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'downpour',
+    title: 'Downpour Records - Official label website',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Downpour Records label. We provide a range of services for the creation of original musical projects: studio mixing, mastering and distribution.' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileImage', content: '/favicon-270x270-min.png' }
     ],
@@ -63,7 +63,7 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
 
-    '@nuxt/image',
+    // '@nuxt/image',
 
     // https://go.nuxtjs.dev/tailwindcss
     // '@nuxtjs/tailwindcss',
@@ -75,7 +75,13 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/robots'
   ],
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
