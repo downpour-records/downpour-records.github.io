@@ -28,13 +28,13 @@
 <script>
 import "@/components/Nav/Nav.scss"
 
+import Vue from 'vue';
 var VueScrollTo = require('vue-scrollto');
-
-var options = {
+Vue.use(VueScrollTo, {
   easing: 'linear',
-  duration: 600,
+  duration: 500,
   offset: -70,
-}
+})
 
 export default {
   name: 'Nav'
