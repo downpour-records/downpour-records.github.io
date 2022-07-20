@@ -1,4 +1,8 @@
 export default {
+  seo: {
+    title: 'Downpour Records - Офіційний сайт лейбла',
+    description: 'Downpour Records label. Ми надаємо комплекс послуг зі створення оригінальних музичних проектів: студійне зведення, майстеринг та дистрибуція.'
+  },
   hero: {
     title: 'Downpour records',
     slogan: 'Нехай світ почує тебе',

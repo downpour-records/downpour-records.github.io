@@ -1,4 +1,8 @@
 export default {
+  seo: {
+    title: 'Downpour Records - Official label website',
+    description: 'Downpour Records label. We provide a range of services for the creation of original musical projects: studio mixing, mastering and distribution.'
+  },
   hero: {
     title: 'Downpour records',
     slogan: 'Let the world hear you',

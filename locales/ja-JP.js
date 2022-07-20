@@ -1,4 +1,8 @@
 export default {
+  seo: {
+    title: 'Downpour Records - ラベル公式サイト',
+    description: 'Downpour Records label. スタジオミキシング、マスタリング、配信など、オリジナルの音楽プロジェクトを作成するためのさまざまなサービスを提供しています。'
+  },
   hero: {
     title: 'Downpour records',
     slogan: '世界にあなたの声を聞かせてください',

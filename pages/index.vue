@@ -93,8 +93,8 @@
 </template>
 
 <script>
-import { Fancybox } from "@fancyapps/ui";
-import "@fancyapps/ui/dist/fancybox.css";
+/*import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox.css";*/
 
 export default {
   name: 'IndexPage',
@@ -102,7 +102,7 @@ export default {
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
     return {
-      title: 'Downpour Records - Official label website',
+      title: this.$t('seo.title'),
       htmlAttrs: {
         ...i18nHead.htmlAttrs
       },
@@ -117,7 +117,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Downpour Records label. We provide a range of services for the creation of original musical projects: studio mixing, mastering and distribution.'
+          content: this.$t('seo.description')
         },
         {
           name: 'format-detection',
