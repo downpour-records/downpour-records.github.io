@@ -1,12 +1,12 @@
 <template>
   <section class="hero" ref="hero">
     <picture>
-      <source srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
-      <source srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
-      <img src="~/assets/images/hero/hero_bg.jpg" class="hero__bg lazyload" alt="Hero image">
+      <source data-srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
+      <source data-srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
+      <img data-src="~/assets/images/hero/hero_bg.jpg" class="hero__bg lazyload" alt="Hero image">
     </picture>
     <div class="container flex items-center flex-col justify-center h-full relative z-10">
-      <h1 class="text-7xl text-white font-medium mb-5">Downpour records123</h1>
+      <h1 class="text-7xl text-white font-medium mb-5">Downpour records</h1>
       <p class="text-lightgrey text-2xl font-medium">Let the world hear you</p>
     </div>
   </section>
