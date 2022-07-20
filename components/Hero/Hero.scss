@@ -1,8 +1,9 @@
 .hero {
+  overflow: hidden;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  @apply bg-primary;
+
+  @apply bg-secondary;
 
   @apply relative;
 
