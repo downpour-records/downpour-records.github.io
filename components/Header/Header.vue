@@ -4,6 +4,7 @@
       <div class="flex items-center justify-between">
         <Logo :image-url="require('~/assets/images/header/Logo.svg')" width="140" height="40" alt="Downpour records logo" />
         <Nav/>
+
         <LangSwitcher/>
       </div>
     </div>
@@ -14,6 +15,6 @@
 import "@/components/Header/Header.scss"
 
 export default {
-  name: 'Header'
+  name: 'Header',
 }
 </script>

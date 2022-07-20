@@ -1,11 +1,11 @@
 <template>
-  <a href="/" class="logo">
+  <nuxt-link :to="localePath('/')" class="logo">
     <img
       :src="imageUrl"
       :width="width"
       :height="height"
       :alt="alt">
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

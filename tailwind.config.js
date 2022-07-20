@@ -47,7 +47,8 @@ module.exports = {
         skyblue: '#E5F9FF',
         lightgreen: '#00DC82',
         darkgreen: '#012A35',
-        lightgrey: '#B2CCCC'
+        lightgrey: '#B2CCCC',
+        darkpurple: '#1D2D40'
       }
     },
     container: {

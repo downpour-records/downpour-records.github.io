@@ -10,7 +10,7 @@
 
     @apply font-normal;
 
-    &.is-active,
+    &.nuxt-link-exact-active,
     &:hover {
 
       @apply text-primary;

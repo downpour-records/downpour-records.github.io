@@ -8,42 +8,6 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Downpour Records - Official label website',
-    htmlAttrs: {
-      lang: 'en'
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Downpour Records label. We provide a range of services for the creation of original musical projects: studio mixing, mastering and distribution.' },
-      { name: 'format-detection', content: 'telephone=no' },
-      { name: 'msapplication-TileImage', content: './favicon-270x270-min.png' }
-    ],
-    /*script: [
-      {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-      }
-    ],*/
-    link: [
-      { rel: 'icon', sizes: "16x16", href: './favicon-16x16-min.png' },
-      { rel: 'icon', sizes: "32x32", href: './favicon-32x32-min.png' },
-      { rel: 'icon', sizes: "192x192", href: './favicon-192x192-min.png' },
-      { rel: 'icon', sizes: "512x512", href: './favicon-512x512-min.png' },
-      { rel: 'apple-touch-icon', href: './favicon-180x180-min.png' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.googleapis.com'
-      },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: ''
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap'
-      }
-    ],
   },
 
   image: {
@@ -83,11 +47,46 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     '@nuxtjs/i18n',
+    '@nuxtjs/axios',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/robots',
+    'vue-scrollto/nuxt'
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        file: 'en-US.js'
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        name: 'Русский',
+        file: 'ru-RU.js'
+      },
+      {
+        code: 'uk',
+        iso: 'uk-UA',
+        name: 'Українська',
+        file: 'uk-UA.js'
+      },
+      {
+        code: 'ja',
+        iso: 'ja-JP',
+        name: '日本語',
+        file: 'ja-JP.js'
+      }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    langDir: '~/locales/',
+  },
 
   optimizedImages: {
     inlineImageLimit: -1,

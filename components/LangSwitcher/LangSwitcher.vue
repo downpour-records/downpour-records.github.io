@@ -13,17 +13,27 @@
         ref="popupItem"
         v-if="toggle"
         class="lang-switcher__list list-none absolute top-12 left-0 w-105px px-0 py-2 bg-darkgreen shadow-md flex flex-col items-center rounded-md">
-        <li class="lang-switcher__item w-full text-center">
-          <a href="#" class="lang-switcher__link my-5px block is-active" @click.self.prevent>English</a>
+<!--        <li class="lang-switcher__item w-full text-center">
+          <a href="#" class="lang-switcher__link my-5px block is-active">English</a>
         </li>
         <li class="lang-switcher__item w-full text-center">
-          <a href="#" class="lang-switcher__link my-5px block" @click.self.prevent>Русский</a>
+          <a href="#" class="lang-switcher__link my-5px block">Русский</a>
         </li>
         <li class="lang-switcher__item w-full text-center">
-          <a href="#" class="lang-switcher__link my-5px block" @click.self.prevent>Українська</a>
+          <a href="#" class="lang-switcher__link my-5px block">Українська</a>
         </li>
         <li class="lang-switcher__item w-full text-center">
-          <a href="#" class="lang-switcher__link my-5px block" @click.self.prevent>日本語</a>
+          <a href="#" class="lang-switcher__link my-5px block">日本語</a>
+        </li>-->
+        <li
+          class="lang-switcher__item w-full text-center"
+          v-for="locale in availableLocales"
+          :key="locale.code">
+          <nuxt-link
+            :to="switchLocalePath(locale.code)"
+            class="lang-switcher__link my-5px block">
+            {{ locale.name }}
+          </nuxt-link>
         </li>
       </ul>
     </Transition>
@@ -50,6 +60,12 @@ import ClickOutside from 'vue-click-outside'
 
 export default {
   name: 'LangSwitcher',
+  computed: {
+    availableLocales () {
+      // return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+      return this.$i18n.locales
+    }
+  },
   data() {
     return {
       toggle: false

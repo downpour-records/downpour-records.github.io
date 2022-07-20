@@ -1,0 +1,21 @@
+.contact-box {
+  background: rgba(0, 53, 67, .8);
+  border-radius: 6px;
+  transition: all .3s ease;
+
+  @apply text-white;
+
+  @apply flex;
+
+  @apply items-center;
+
+  @apply justify-center;
+
+  @apply h-40px;
+
+  @apply w-full;
+
+  &:hover {
+    background: #08495b;
+  }
+}
