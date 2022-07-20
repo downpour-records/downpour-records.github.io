@@ -6,8 +6,8 @@
       <img src="~/assets/images/hero/hero_bg.jpg" class="hero__bg" alt="Hero image">
     </picture>
     <div class="container flex items-center flex-col justify-center h-full relative z-10">
-      <h1 class="text-7xl text-white font-medium mb-5">{{ $t('title') }}</h1>
-      <p class="text-lightgrey text-2xl font-medium">{{ $t('slogan') }}</p>
+      <h1 class="text-7xl text-white font-medium mb-5">{{ $t('hero.title') }}</h1>
+      <p class="text-lightgrey text-2xl font-medium">{{ $t('hero.slogan') }}</p>
     </div>
   </section>
 </template>
