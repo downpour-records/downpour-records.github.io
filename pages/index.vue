@@ -40,7 +40,7 @@
                 <img src="~/assets/images/file-audio-solid.svg" class="lazyload" width="30" height="40" alt="">
                 <p class="text-white pt-7 pb-5 font-bold text-3xl">{{ $t('section_services.text2') }}</p>
                 <p class="text-white font-medium leading-6 mb-6" v-html="$t('section_services.text3')"></p>
-                <p class="text-white font-bold text-8xl mt-auto" v-html="$t('section_services.text4')"></p>
+                <p class="text-white font-bold text-8xl mt-auto">15<span class="text-5xl">$ / {{ $t('section_services.text4') }}</span></p>
               </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <p class="text-white pt-7 pb-5 font-bold text-3xl">{{ $t('section_services.text5') }}</p>
                 <p class="text-white font-medium leading-6 mb-6">{{ $t('section_services.text6') }}<br><br>
                   {{ $t('section_services.text7') }}</p>
-                <p class="text-white font-bold text-8xl" v-html="$t('section_services.text8')"></p>
+                <p class="text-white font-bold text-8xl">35<span class="text-5xl">$ / {{ $t('section_services.text8') }}</span></p>
               </div>
             </div>
           </div>

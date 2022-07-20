@@ -24,11 +24,11 @@ export default {
       'Reverb, Delay и другие эффекты<br>\n' +
       'Коррекция высоты тона<br>\n' +
       'Мастеринг',
-    text4: '15<span class="text-5xl">$ / за трек</span>',
+    text4: 'за трек',
     text5: 'Дистрибуция музыки',
     text6: 'Загрузка вашей музыки на все основные потоковые сервисы',
     text7: 'Anghami, iHeartRadio, AWA Music, Boomplay, Deezer, 7Digital, KKBOX, Mixcloud, Netease, Pandora, JioSaavn, Spotify, TikTok, United Media Agency, GraceNote, SoundCloud, Amazon Music, Claro Música/iMusica, Apple Music/iTunes, Resso, Napster, Tidal, QQ Music, Shazam, YouTube Music, Nuuday, Qobuz, SoundMouse, Moodagent, MediaNet, LINE, Fizy, Feel Music, Empik Music, Peloton, Sirius XM & Simfy Africa',
-    text8: '35<span class="text-5xl">$ / за релиз</span>',
+    text8: 'за релиз',
     btnText: 'Подробнее'
   },
   section_contacts: {

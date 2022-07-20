@@ -24,11 +24,11 @@ export default {
       'Reverb, Delay ＆その他の効果<br>\n' +
       'ピッチ補正<br>\n' +
       'マスタリング',
-    text4: '15<span class="text-5xl">$ / トラックあたり</span>',
+    text4: 'トラックあたり',
     text5: '音楽配信',
     text6: 'すべての主要なストリーミングサービスに音楽をアップロードする',
     text7: 'Anghami, iHeartRadio, AWA Music, Boomplay, Deezer, 7Digital, KKBOX, Mixcloud, Netease, Pandora, JioSaavn, Spotify, TikTok, United Media Agency, GraceNote, SoundCloud, Amazon Music, Claro Música/iMusica, Apple Music/iTunes, Resso, Napster, Tidal, QQ Music, Shazam, YouTube Music, Nuuday, Qobuz, SoundMouse, Moodagent, MediaNet, LINE, Fizy, Feel Music, Empik Music, Peloton, Sirius XM & Simfy Africa',
-    text8: '35<span class="text-5xl">$ / リリースごと</span>',
+    text8: 'リリースごと',
     btnText: 'もっと'
   },
   section_contacts: {

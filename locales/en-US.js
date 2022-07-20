@@ -24,11 +24,11 @@ export default {
       'Reverb, Delay & other effects<br>\n' +
       'Pitch correction<br>\n' +
       'Mastering',
-    text4: '15<span class="text-5xl">$ / per track</span>',
+    text4: 'per track',
     text5: 'Distribute Music',
     text6: 'Distribute your music to all major streaming services',
     text7: 'Anghami, iHeartRadio, AWA Music, Boomplay, Deezer, 7Digital, KKBOX, Mixcloud, Netease, Pandora, JioSaavn, Spotify, TikTok, United Media Agency, GraceNote, SoundCloud, Amazon Music, Claro Música/iMusica, Apple Music/iTunes, Resso, Napster, Tidal, QQ Music, Shazam, YouTube Music, Nuuday, Qobuz, SoundMouse, Moodagent, MediaNet, LINE, Fizy, Feel Music, Empik Music, Peloton, Sirius XM & Simfy Africa',
-    text8: '35<span class="text-5xl">$ / per release</span>',
+    text8: 'per release',
     btnText: 'Learn more'
   },
   section_contacts: {
