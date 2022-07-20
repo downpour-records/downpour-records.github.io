@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" ref="hero">
+  <section class="hero" ref="hero" id="hero">
     <picture v-if="show">
       <source srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
       <source srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">

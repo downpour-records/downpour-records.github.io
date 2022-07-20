@@ -4,7 +4,7 @@
     <main>
       <Hero/>
 
-      <section class="pt-24 pb-16 bg-secondary">
+      <section class="pt-24 pb-16 bg-secondary" id="releases">
         <div class="container">
           <h2 class="text-white mb-4 text-center text-6xl font-medium">{{ $t('section_releases.text1') }}</h2>
           <p class="text-center text-white text-xl mb-16 font-medium">{{ $t('section_releases.text2') }}</p>
@@ -30,7 +30,7 @@
         </div>
       </section>
 
-      <section class="pt-40 pb-80 bg-white relative">
+      <section class="pt-40 pb-80 bg-white relative" id="services">
         <img src="~/assets/images/dividers/landscape-explore.svg" class="lazyload w-full absolute top-0 left-0" alt="">
         <div class="container relative z-10">
           <h2 class="text-center text-6xl font-medium mb-16">{{ $t('section_services.text1') }}</h2>
@@ -61,7 +61,7 @@
         <img src="~/assets/images/dividers/discover-mountain.svg" class="lazyload w-full absolute bottom-0 left-0" alt="">
       </section>
 
-      <section class="pt-12 pb-24 bg-skyblue relative">
+      <section class="pt-12 pb-24 bg-skyblue relative" id="contacts">
         <div class="container">
           <h2 class="mb-4 text-center text-6xl font-medium">{{ $t('section_contacts.text1') }}</h2>
           <p class="text-center text-xl mb-12 font-medium">{{ $t('section_contacts.text2') }}</p>
