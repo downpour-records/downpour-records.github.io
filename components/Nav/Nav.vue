@@ -4,42 +4,22 @@
       <li class="main-nav__item">
         <a href="#"
            class="main-nav__link"
-           v-scroll-to="{
-             el: '#hero',
-             duration: 600,
-             easing: 'linear',
-             offset: -70,
-         }">{{ $t('nav.home') }}</a>
+           v-scroll-to="'#hero'">{{ $t('nav.home') }}</a>
       </li>
       <li class="main-nav__item">
         <a href="#"
            class="main-nav__link"
-           v-scroll-to="{
-             el: '#releases',
-             duration: 600,
-             easing: 'linear',
-             offset: -70,
-         }">{{ $t('nav.releases') }}</a>
+           v-scroll-to="'#releases'">{{ $t('nav.releases') }}</a>
       </li>
       <li class="main-nav__item">
         <a href="#"
            class="main-nav__link"
-           v-scroll-to="{
-             el: '#services',
-             duration: 600,
-             easing: 'linear',
-             offset: -70,
-         }">{{ $t('nav.services') }}</a>
+           v-scroll-to="'#services'">{{ $t('nav.services') }}</a>
       </li>
       <li class="main-nav__item">
         <a href="#"
            class="main-nav__link"
-           v-scroll-to="{
-             el: '#contacts',
-             duration: 600,
-             easing: 'linear',
-             offset: -70,
-         }">{{ $t('nav.contacts') }}</a>
+           v-scroll-to="'#contacts'">{{ $t('nav.contacts') }}</a>
       </li>
     </ul>
   </nav>
@@ -47,6 +27,14 @@
 
 <script>
 import "@/components/Nav/Nav.scss"
+
+var VueScrollTo = require('vue-scrollto');
+
+var options = {
+  easing: 'linear',
+  duration: 600,
+  offset: -70,
+}
 
 export default {
   name: 'Nav'
