@@ -6,7 +6,7 @@
       <img data-src="~/assets/images/hero/hero_bg.jpg" class="hero__bg lazyload" alt="Hero image">
     </picture>
     <div class="container flex items-center flex-col justify-center h-full relative z-10">
-      <h1 class="text-7xl text-white font-medium mb-5">Downpour records</h1>
+      <h1 class="text-7xl text-white font-medium mb-5">Downpour records123</h1>
       <p class="text-lightgrey text-2xl font-medium">Let the world hear you</p>
     </div>
   </section>
