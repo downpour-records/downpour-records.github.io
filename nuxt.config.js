@@ -52,15 +52,15 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/robots',
     'vue-scrollto/nuxt',
-    '@nuxtjs/redirect-module'
+    // '@nuxtjs/redirect-module'
   ],
 
-  redirect: [
+  /*redirect: [
     { from: '/en/', to:'/en', statusCode: 301 },
     { from: '/ru/', to:'/ru', statusCode: 301 },
     { from: '/uk/', to:'/uk', statusCode: 301 },
     { from: '/ja/', to:'/ja', statusCode: 301 },
-  ],
+  ],*/
 
   i18n: {
     locales: [
@@ -126,7 +126,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    publicPath: './_nuxt/',
+    // publicPath: './_nuxt/',
     extend (config, { isDev, isClient, loaders: { vue } }) {
       vue.transformAssetUrls.img = ['data-src', 'src']
       vue.transformAssetUrls.source = ['data-srcset', 'srcset']
