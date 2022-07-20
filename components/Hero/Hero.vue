@@ -19,9 +19,7 @@ export default {
   name: 'Hero',
 
   mounted() {
-    this.$nextTick( () => {
-      this.onResize()
-    })
+    this.onResize()
     window.addEventListener('resize', this.onResize)
   },
 
