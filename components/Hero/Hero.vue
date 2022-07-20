@@ -1,6 +1,6 @@
 <template>
   <section class="hero" ref="hero">
-    <picture>
+    <picture v-if="show">
       <source data-srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
       <source data-srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
       <img data-src="~/assets/images/hero/hero_bg.jpg" class="hero__bg lazyload" alt="Hero image">
@@ -40,11 +40,10 @@
 export default {
   name: 'Hero',
 
-  mounted() {
-    this.$nextTick(() => {
-      this.onResize()
-      window.addEventListener('resize', this.onResize)
-    })
+  data() {
+    return {
+      show: false
+    }
   },
 
   methods: {
@@ -52,6 +51,17 @@ export default {
       let viewportHeight = window.innerHeight
       this.$refs.hero.style.height = viewportHeight + 'px'
     }
+  },
+
+  mounted() {
+    /*this.$nextTick(() => {
+      this.onResize()
+      window.addEventListener('resize', this.onResize)
+    })*/
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+    this.show = true
   }
+
 }
 </script>
