@@ -46,12 +46,20 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/i18n',
+    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/robots',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    '@nuxtjs/redirect-module'
+  ],
+
+  redirect: [
+    { from: '/en/', to:'/en', statusCode: 301 },
+    { from: '/ru/', to:'/ru', statusCode: 301 },
+    { from: '/uk/', to:'/uk', statusCode: 301 },
+    { from: '/ja/', to:'/ja', statusCode: 301 },
   ],
 
   i18n: {
