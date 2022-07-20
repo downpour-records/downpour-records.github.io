@@ -86,6 +86,6 @@ import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox.css";
 
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
 }
 </script>

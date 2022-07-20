@@ -1,12 +1,12 @@
 <template>
   <section class="hero" ref="hero">
-    <picture>
+<!--    <picture>
       <source srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
       <source srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
       <img src="~/assets/images/hero/hero_bg.jpg" class="hero__bg" alt="Hero image">
-    </picture>
+    </picture>-->
     <div class="container flex items-center flex-col justify-center h-full relative z-10">
-      <h1 class="text-7xl text-white font-medium mb-5">Downpour records123</h1>
+      <h1 class="text-7xl text-white font-medium mb-5">Downpour records</h1>
       <p class="text-lightgrey text-2xl font-medium">Let the world hear you</p>
     </div>
   </section>
@@ -18,9 +18,11 @@ import "@/components/Hero/Hero.scss"
 export default {
   name: 'Hero',
 
-  /*mounted() {
-    this.onResize()
-    window.addEventListener('resize', this.onResize)
+  mounted() {
+    this.$nextTick(() => {
+      this.onResize()
+      window.addEventListener('resize', this.onResize)
+    })
   },
 
   methods: {
@@ -28,6 +30,6 @@ export default {
       let viewportHeight = window.innerHeight
       this.$refs.hero.style.height = viewportHeight + 'px'
     }
-  }*/
+  }
 }
 </script>
