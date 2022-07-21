@@ -1,5 +1,5 @@
 <template>
-  <section class="hero min-h-fill-available" ref="hero" id="hero">
+  <section class="hero" ref="hero" id="hero">
     <picture v-if="show">
       <source srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
       <source srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
@@ -35,10 +35,10 @@ export default {
   },
 
   methods: {
-    /*onResize() {
+    onResize() {
       let viewportHeight = window.innerHeight
       this.$refs.hero.style.height = viewportHeight + 'px'
-    }*/
+    }
   },
 
   mounted() {
@@ -46,8 +46,8 @@ export default {
       this.onResize()
       window.addEventListener('resize', this.onResize)
     })*/
-    /*this.onResize()
-    window.addEventListener('resize', this.onResize)*/
+    this.onResize()
+    // window.addEventListener('resize', this.onResize)
     this.show = true
   }
 
