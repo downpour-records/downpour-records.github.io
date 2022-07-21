@@ -37,15 +37,15 @@ body {
   }
 }
 
-body, #__nuxt, #__layout, .wrapper {
+/*body, #__nuxt, #__layout {
   height: 100%;
   min-height: 100%;
-}
+}*/
 
-.wrapper {
+/*.wrapper {
   display: flex;
   flex-direction: column;
-}
+}*/
 
 main {
   flex: 1;

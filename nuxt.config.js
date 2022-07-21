@@ -10,9 +10,11 @@ export default {
   head: {
   },
 
-  image: {
+  loading: false,
+
+  /*image: {
     domains: ['http://localhost:3000']
-  },
+  },*/
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -137,5 +139,5 @@ export default {
     '~/tailwind.config.js',
     '~/assets/images/*',
     '~/assets/images/**/*'
-  ]
+  ],
 }
