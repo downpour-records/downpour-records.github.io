@@ -1,16 +1,17 @@
 <template>
   <header>
     <div class="container">
-      <div class="flex items-center md:justify-between justify-center">
-        <div class="h-12 flex items-center justify-center">
+      <div class="flex items-center justify-between">
+        <div class="h-12 flex items-center justify-center order-2 md:order-1">
           <Logo
             :image-url="require('~/assets/images/header/Logo.svg')"
             width="140" height="40"
             alt="Downpour records logo" />
         </div>
-        <Nav v-if="!isMobile"/>
-        <LangSwitcher v-if="!isMobile"/>
+        <Nav class="order-2" v-if="!isMobile"/>
+        <LangSwitcher class="order-3" />
         <Burger
+          class="order-1"
           v-if="isMobile"
           @popup='popup' />
       </div>

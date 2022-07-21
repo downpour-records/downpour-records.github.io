@@ -11,14 +11,14 @@
 
     <Transition name="slide">
       <aside
-        class="md:hidden min-h-fill-available fixed top-0 left-0 w-80 h-full pointer-events-auto border-r border-skydarker z-50 bg-secondary bg-opacity-80"
+        class="md:hidden min-h-fill-available fixed top-0 left-0 w-72 h-full pointer-events-auto border-r border-skydarker z-50 bg-secondary bg-opacity-80"
         v-if="popupShow">
         <div class="flex items-center justify-between w-full px-0.5 sm:px-2 h-header d-aside-header-bg">
           <button class="focus:outline-none text-gray-300" @click="onAsideHide">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="p-3 w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
 
-          <LangSwitcher @asideHide='onAsideHide' />
+<!--          <LangSwitcher @asideHide='onAsideHide' />-->
         </div>
         <div class="py-4 px-4 sm:px-6">
           <Nav @asideHide='onAsideHide'/>
@@ -187,6 +187,9 @@ export default {
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
     return {
+      /*bodyAttrs: {
+        class: 'd-scrollbar'
+      },*/
       title: this.$t('seo.title'),
       htmlAttrs: {
         ...i18nHead.htmlAttrs

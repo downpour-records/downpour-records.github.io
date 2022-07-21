@@ -127,7 +127,13 @@ module.exports = {
           '&:hover': {
             'background-color': theme('colors.lightgreen'),
           },
-        }
+        },
+        /*'.d-scrollbar': {
+          '--scrollbar-thumb': '#255461',
+          '--scrollbar-track': 'initial',
+          'scrollbar-color': 'var(--scrollbar-thumb) var(--scrollbar-track)',
+          'scrollbar-width': 'thin'
+        }*/
       })
       addUtilities({
         '.min-h-fill-available': {
@@ -139,6 +145,9 @@ module.exports = {
         '.d-aside-header-bg': {
           'background-color': 'rgba(1, 42, 53, 1)',
         },
+        '.antialiased': {
+          '-webkit-font-smoothing': 'antialiased'
+        }
       })
     }
   ],

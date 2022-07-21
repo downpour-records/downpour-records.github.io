@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" ref="hero" id="hero">
+  <section class="hero min-h-fill-available" ref="hero" id="hero">
     <picture v-if="show">
       <source srcset="~/assets/images/hero/hero_bg.jpg?webp" type="image/webp">
       <source srcset="~/assets/images/hero/hero_bg.jpg" type="image/jpg">
@@ -8,6 +8,16 @@
     <div class="container flex items-center flex-col justify-center h-full relative z-10">
       <h1 class="text-center md:text-7xl text-5xl text-white font-medium md:mb-5 mb-2">{{ $t('hero.title') }}</h1>
       <p class="text-center text-lightgrey md:text-2xl text-xl font-medium">{{ $t('hero.slogan') }}</p>
+      <a href="#"
+         v-scroll-to="{
+            el: '#releases',
+            easing: 'linear',
+            duration: 500,
+            offset: -70,
+         }"
+         class="lazyload hero__arrow">
+        <img data-src="~/assets/images/arrow-down-icon-hero.svg" class="lazyload" alt="" width="60" height="60">
+      </a>
     </div>
   </section>
 </template>
@@ -25,10 +35,10 @@ export default {
   },
 
   methods: {
-    onResize() {
+    /*onResize() {
       let viewportHeight = window.innerHeight
       this.$refs.hero.style.height = viewportHeight + 'px'
-    }
+    }*/
   },
 
   mounted() {
@@ -36,8 +46,8 @@ export default {
       this.onResize()
       window.addEventListener('resize', this.onResize)
     })*/
-    this.onResize()
-    window.addEventListener('resize', this.onResize)
+    /*this.onResize()
+    window.addEventListener('resize', this.onResize)*/
     this.show = true
   }
 

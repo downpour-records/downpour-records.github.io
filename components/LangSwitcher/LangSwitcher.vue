@@ -1,7 +1,7 @@
 <template>
   <div class="lang-switcher inline-flex items-center justify-center w-12 h-12 relative text-left">
     <div
-      class="flex items-center justify-center cursor-pointer h-full text-gray-300 md:text-white hover:text-white transition-colors duration-300"
+      class="flex items-center justify-center cursor-pointer h-full text-white"
       ref="langSwitcher"
       @click="toggle = !toggle"
       v-click-outside="hide">

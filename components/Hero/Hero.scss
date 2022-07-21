@@ -23,4 +23,13 @@
 
     @apply left-0;
   }
+
+  &__arrow {
+
+    @apply absolute;
+
+    @apply bottom-0;
+
+    left: calc(50% - 30px);
+  }
 }
