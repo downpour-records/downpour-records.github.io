@@ -10,11 +10,18 @@
 
     @apply font-medium;
 
-    @apply text-sm;
-
     @apply block;
 
-    @apply px-4;
+    @apply py-2;
+
+    @apply text-lg;
+
+    @media only screen and (min-width: theme('screens.md')) {
+
+      @apply px-4;
+
+      @apply text-sm;
+    }
 
     &:hover {
 
