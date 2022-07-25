@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV === 'development';
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -44,6 +46,7 @@ export default {
     // '@nuxtjs/tailwindcss',
 
     '@aceforth/nuxt-optimized-images',
+    'nuxt-purgecss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,6 +66,26 @@ export default {
     { from: '/uk/', to:'/uk', statusCode: 301 },
     { from: '/ja/', to:'/ja', statusCode: 301 },
   ],*/
+
+  purgeCSS: {
+    mode: 'postcss',
+    //enabled: ({ isDev, isClient }) => (!isDev && isClient), // or `false` when in dev/debug mode
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'pages/*.vue',
+      'plugins/**/*.js'
+    ],
+    // styleExtensions: ['.css', '.scss'],
+    whitelist: ['body', 'html', 'nuxt-progress'],
+    /*extractors: () => [
+      {
+        extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
+        extensions: ['vue', 'js', 'html']
+      }
+    ]*/
+  },
 
   i18n: {
     locales: [
@@ -129,7 +152,24 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // publicPath: './_nuxt/',
+    ...(!isDev && {
+      extractCSS: true,
+      optimization: {
+        splitChunks: {
+          cacheGroups: {
+            styles: {
+              name: 'styles',
+              test: /\.(css|vue|scss)$/,
+              chunks: 'all',
+              enforce: true
+            }
+          }
+        }
+      },
+    }),
     extend (config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+      }
       vue.transformAssetUrls.img = ['data-src', 'src']
       vue.transformAssetUrls.source = ['data-srcset', 'srcset']
     }
