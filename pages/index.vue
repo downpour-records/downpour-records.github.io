@@ -26,107 +26,105 @@
       </aside>
     </Transition>
 
-    <Transition name="fade">
-      <div class="flex flex-col" v-if="loaded">
-        <Header @popup='onAsideShow' />
-        <main>
-          <Hero/>
+    <div class="flex flex-col" v-if="loaded">
+      <Header @popup='onAsideShow' />
+      <main>
+        <Hero/>
 
-          <section class="lg:pt-24 md:pt-20 pt-12 md:pb-16 pb-10 bg-secondary" id="releases">
-            <div class="container">
-              <h2 class="text-white mb-4 text-center md:text-6xl text-5xl font-medium">{{ $t('section_releases.text1') }}</h2>
-              <p class="text-center text-white text-xl md:mb-16 mb-10 font-medium">{{ $t('section_releases.text2') }}</p>
-              <div class="md:grid-cols-2 md:grid-flow-col md:gap-7 md:grid">
-                <div class="flex flex-col mb-12 md:mb-0">
-                  <div class="bg-white p-5 rounded-xl border-b-8 border-primary md:flex-auto">
-                    <iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1464524509&color=%2329220c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  </div>
-                  <div class="text-center mt-9">
-                    <a href="https://tunelink.co/korveld/deep-woods-tales" target="_blank" class="btn btn-primary">{{ $t('section_releases.btnText') }}</a>
-                  </div>
+        <section class="lg:pt-24 md:pt-20 pt-12 md:pb-16 pb-10 bg-secondary" id="releases">
+          <div class="container">
+            <h2 class="text-white mb-4 text-center md:text-6xl text-5xl font-medium">{{ $t('section_releases.text1') }}</h2>
+            <p class="text-center text-white text-xl md:mb-16 mb-10 font-medium">{{ $t('section_releases.text2') }}</p>
+            <div class="md:grid-cols-2 md:grid-flow-col md:gap-7 md:grid">
+              <div class="flex flex-col mb-12 md:mb-0">
+                <div class="bg-white p-5 rounded-xl border-b-8 border-primary md:flex-auto">
+                  <iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1464524509&color=%2329220c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                 </div>
+                <div class="text-center mt-9">
+                  <a href="https://tunelink.co/korveld/deep-woods-tales" target="_blank" class="btn btn-primary">{{ $t('section_releases.btnText') }}</a>
+                </div>
+              </div>
 
-                <div class="flex flex-col">
-                  <div class="bg-white p-5 rounded-xl border-b-8 border-primary md:flex-auto">
-                    <iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1439098399&color=%23373b50&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                  </div>
-                  <div class="text-center mt-9">
-                    <a href="https://tunelink.co/downpour/crimson-love" target="_blank" class="btn btn-primary">{{ $t('section_releases.btnText') }}</a>
-                  </div>
+              <div class="flex flex-col">
+                <div class="bg-white p-5 rounded-xl border-b-8 border-primary md:flex-auto">
+                  <iframe width="100%" height="320" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1439098399&color=%23373b50&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                </div>
+                <div class="text-center mt-9">
+                  <a href="https://tunelink.co/downpour/crimson-love" target="_blank" class="btn btn-primary">{{ $t('section_releases.btnText') }}</a>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="lg:pt-40 md:pt-32 pt-24 lg:pb-80 md:pb-52 sm:pb-40 pb-32 bg-white relative" id="services">
-            <img src="~/assets/images/dividers/landscape-explore.svg" class="lazyload w-full absolute top-0 left-0" alt="">
-            <div class="container relative z-10">
-              <h2 class="text-center md:text-6xl text-5xl font-medium md:mb-16 mb-10">{{ $t('section_services.text1') }}</h2>
-              <div class="md:grid-cols-2 md:grid-flow-col md:gap-7 md:grid">
-                <div class="flex flex-col mb-12 md:mb-0">
-                  <div class="bg-secondary border border-darkpurple pt-10 pb-6 md:px-9 px-8 text-center rounded-xl flex-auto flex flex-col items-center">
-                    <img src="~/assets/images/file-audio-solid.svg" class="lazyload" width="30" height="40" alt="">
-                    <p class="text-white pt-7 pb-5 font-bold text-3xl">{{ $t('section_services.text2') }}</p>
-                    <p class="text-white font-medium leading-6 mb-6" v-html="$t('section_services.text3')"></p>
-                    <p class="text-white font-bold xl:text-8xl text-6xl mt-auto">15<span class="xl:text-5xl text-3xl">$ / {{ $t('section_services.text4') }}</span></p>
-                  </div>
-                </div>
-
-                <div class="flex flex-col">
-                  <div class="bg-secondary border border-darkpurple pt-10 pb-6 md:px-9 px-8 text-center rounded-xl flex-auto flex flex-col items-center">
-                    <img src="~/assets/images/music-solid.svg" class="lazyload" width="40" height="40" alt="">
-                    <p class="text-white pt-7 pb-5 font-bold text-3xl">{{ $t('section_services.text5') }}</p>
-                    <p class="text-white font-medium leading-6 mb-6">{{ $t('section_services.text6') }}<br><br>
-                      {{ $t('section_services.text7') }}</p>
-                    <p class="text-white font-bold xl:text-8xl text-6xl">35<span class="xl:text-5xl text-3xl">$ / {{ $t('section_services.text8') }}</span></p>
-                  </div>
+        <section class="lg:pt-40 md:pt-32 pt-24 lg:pb-80 md:pb-52 sm:pb-40 pb-32 bg-white relative" id="services">
+          <img src="~/assets/images/dividers/landscape-explore.svg" class="lazyload w-full absolute top-0 left-0" alt="">
+          <div class="container relative z-10">
+            <h2 class="text-center md:text-6xl text-5xl font-medium md:mb-16 mb-10">{{ $t('section_services.text1') }}</h2>
+            <div class="md:grid-cols-2 md:grid-flow-col md:gap-7 md:grid">
+              <div class="flex flex-col mb-12 md:mb-0">
+                <div class="bg-secondary border border-darkpurple pt-10 pb-6 md:px-9 px-8 text-center rounded-xl flex-auto flex flex-col items-center">
+                  <img src="~/assets/images/file-audio-solid.svg" class="lazyload" width="30" height="40" alt="">
+                  <p class="text-white pt-7 pb-5 font-bold text-3xl">{{ $t('section_services.text2') }}</p>
+                  <p class="text-white font-medium leading-6 mb-6" v-html="$t('section_services.text3')"></p>
+                  <p class="text-white font-bold xl:text-8xl text-6xl mt-auto">15<span class="xl:text-5xl text-3xl">$ / {{ $t('section_services.text4') }}</span></p>
                 </div>
               </div>
-              <div class="text-center mt-9">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  v-scroll-to="{
+
+              <div class="flex flex-col">
+                <div class="bg-secondary border border-darkpurple pt-10 pb-6 md:px-9 px-8 text-center rounded-xl flex-auto flex flex-col items-center">
+                  <img src="~/assets/images/music-solid.svg" class="lazyload" width="40" height="40" alt="">
+                  <p class="text-white pt-7 pb-5 font-bold text-3xl">{{ $t('section_services.text5') }}</p>
+                  <p class="text-white font-medium leading-6 mb-6">{{ $t('section_services.text6') }}<br><br>
+                    {{ $t('section_services.text7') }}</p>
+                  <p class="text-white font-bold xl:text-8xl text-6xl">35<span class="xl:text-5xl text-3xl">$ / {{ $t('section_services.text8') }}</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-9">
+              <a
+                href="#"
+                class="btn btn-primary"
+                v-scroll-to="{
               el: '#contacts',
               easing: 'linear',
               duration: 500,
               offset: -70,
           }">{{ $t('section_services.btnText') }}</a>
+            </div>
+          </div>
+          <img src="~/assets/images/dividers/discover-mountain.svg" class="lazyload w-full absolute bottom-0 left-0" alt="">
+        </section>
+
+        <section class="pt-12 md:pb-24 pb-14 bg-skyblue relative" id="contacts">
+          <div class="container">
+            <h2 class="mb-4 text-center md:text-6xl text-5xl font-medium">{{ $t('section_contacts.text1') }}</h2>
+            <p class="text-center text-xl md:mb-12 mb-8 font-medium">{{ $t('section_contacts.text2') }}</p>
+
+            <div class="bg-secondary p-10 text-center rounded-xl max-w-xl mx-auto border border-darkpurple">
+              <div class="sm:grid-cols-2 sm:grid-flow-col sm:gap-5 sm:grid space-y-4 sm:space-y-0">
+                <ContactBox
+                  :image-url="require('~/assets/images/envelope-solid.svg')"
+                  width="25"
+                  height="25"
+                  text="voloseg88@gmail.com"
+                  link="mailto:voloseg88@gmail.com"
+                />
+                <ContactBox
+                  :image-url="require('~/assets/images/instagram-brands.svg')"
+                  width="22"
+                  height="25"
+                  text="instagram"
+                  link="https://www.instagram.com/downpour_records_official/"
+                  target="_blank"
+                />
               </div>
             </div>
-            <img src="~/assets/images/dividers/discover-mountain.svg" class="lazyload w-full absolute bottom-0 left-0" alt="">
-          </section>
-
-          <section class="pt-12 md:pb-24 pb-14 bg-skyblue relative" id="contacts">
-            <div class="container">
-              <h2 class="mb-4 text-center md:text-6xl text-5xl font-medium">{{ $t('section_contacts.text1') }}</h2>
-              <p class="text-center text-xl md:mb-12 mb-8 font-medium">{{ $t('section_contacts.text2') }}</p>
-
-              <div class="bg-secondary p-10 text-center rounded-xl max-w-xl mx-auto border border-darkpurple">
-                <div class="sm:grid-cols-2 sm:grid-flow-col sm:gap-5 sm:grid space-y-4 sm:space-y-0">
-                  <ContactBox
-                    :image-url="require('~/assets/images/envelope-solid.svg')"
-                    width="25"
-                    height="25"
-                    text="voloseg88@gmail.com"
-                    link="mailto:voloseg88@gmail.com"
-                  />
-                  <ContactBox
-                    :image-url="require('~/assets/images/instagram-brands.svg')"
-                    width="22"
-                    height="25"
-                    text="instagram"
-                    link="https://www.instagram.com/downpour_records_official/"
-                    target="_blank"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer/>
-      </div>
-    </Transition>
+          </div>
+        </section>
+      </main>
+      <Footer/>
+    </div>
 
     <Preloader v-if="preloader" />
 
@@ -134,6 +132,16 @@
 </template>
 
 <style lang="scss">
+.content-enter-active,
+.content-leave-active {
+  transition: all 1s ease;
+}
+
+.content-enter,
+.content-leave-to {
+  opacity: 0;
+}
+
 .fade-enter-active {
   transition: all 0.3s ease;
 }
